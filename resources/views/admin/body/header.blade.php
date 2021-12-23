@@ -1,246 +1,129 @@
- <!-- header area -->
- <header class="header_area">
-    <!-- logo -->
-    <div class="sidebar_logo">
-        <a href="index.html">
-            <img src="{{ asset('panel/assets/images/logo.png') }}" alt="" class="img-fluid logo1">
-            <img src="{{ asset('panel/assets/images/logo_small.png') }}" alt="" class="img-fluid logo2">
-        </a>
-    </div>
-    <div class="sidebar_btn">
-        <button class="sidbar-toggler-btn"><i class="fas fa-bars"></i></button>
-    </div>
-    <ul class="header_menu">
-        <li><div class="text-white mt-3">{{ Auth::guard('admin')->user()->name }}</div></li>
-        <li><a href="#" class="search_btn" data-toggle="modal" data-target="#myModal"><i class="fas fa-search"></i></a>
-            <div class="modal fade search_box" id="myModal">
-                    <button type="button" class="close m-2 text-white float-right" data-dismiss="modal">&times;</button>
-                    <form action="#" class="modal-dialog modal-lg">
-                    
-                    <div class="modal-content bg-transparent">
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                            <input class="form-control bg-transparent text-white form-control-lg"  type="text" placeholder="Search...">
-                            <button class="btn btn-lg submit-btn" type="submit">Search</button>
-                            </div>
-                    </div>
-                        
-                    </form>
-            </div>
-        </li>
-        <li><a data-toggle="dropdown" href="#"><i class="far fa-envelope"></i><span>4</span></a>
-            <div class="dropdown_wrapper messages_item dropdown-menu dropdown-menu-right">
-                <div class="dropdown_header">
-                    <p>you have 4 messages</p>
-                </div>
-                <ul class="dropdown_body nice_scroll scrollbar">
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <img src="{{ asset('panel/assets/images/user1.jpg') }}" alt="" class="img-fluid">
-                            </div>
-                            <div class="text-part">
-                                <h6>Madelyn <span><i class="far fa-clock"></i> today</span></h6>
-                                <p>Hello Sam...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <img src="{{ asset('panel/assets/images/user2.jpg') }}" alt="" class="img-fluid">
-                            </div>
-                            <div class="text-part">
-                                <h6>Melvin <span><i class="far fa-clock"></i> today</span></h6>
-                                <p>Hello jhon...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <img src="{{ asset('panel/assets/images/user3.jpg') }}" alt="" class="img-fluid">
-                            </div>
-                            <div class="text-part">
-                                <h6>Olinda <span><i class="far fa-clock"></i> today</span></h6>
-                                <p>Hello jhon...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <img src="{{ asset('panel/assets/images/user1.jpg') }}" alt="" class="img-fluid">
-                            </div>
-                            <div class="text-part">
-                                <h6>Johnson <span><i class="far fa-clock"></i> today</span></h6>
-                                <p>Hello Olinda...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <img src="{{ asset('panel/assets/images/user3.jpg') }}" alt="" class="img-fluid">
-                            </div>
-                            <div class="text-part">
-                                <h6>Madelyn <span><i class="far fa-clock"></i> today</span></h6>
-                                <p>Hello Sam...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <img src="{{ asset('panel/assets/images/user2.jpg') }}" alt="" class="img-fluid">
-                            </div>
-                            <div class="text-part">
-                                <h6>Melvin <span><i class="far fa-clock"></i> today</span></h6>
-                                <p>Hello jhon...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <img src="{{ asset('panel/assets/images/user3.jpg') }}" alt="" class="img-fluid">
-                            </div>
-                            <div class="text-part">
-                                <h6>Olinda <span><i class="far fa-clock"></i> today</span></h6>
-                                <p>Hello jhon...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <img src="{{ asset('panel/assets/images/user1.jpg') }}" alt="" class="img-fluid">
-                            </div>
-                            <div class="text-part">
-                                <h6>Johnson <span><i class="far fa-clock"></i> today</span></h6>
-                                <p>Hello Olinda...</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <div class="dropdown_footer">
-                    <a href="#">See All Messages</a>
-                </div>
-            </div>
-        </li>
-        <li><a href="#" data-toggle="dropdown"><i class="far fa-bell"></i><span>9</span></a>
-            <div class="dropdown_wrapper notification_item dropdown-menu dropdown-menu-right">
-                <div class="dropdown_header">
-                    <p>You have 9 notifications</p>
-                </div>
-                <ul class="dropdown_body scrollbar nice_scroll">
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <span class="text-success"><i class="fas fa-users"></i></span>
-                            </div>
-                            <div class="text-part">
-                                <p>5 new members joined</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <span class="text-danger"><i class="fas fa-exclamation-triangle"></i></span>
-                            </div>
-                            <div class="text-part">
-                                <p> Very long description here that may...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <span class="text-success"><i class="fas fa-cart-plus"></i></span>
-                            </div>
-                            <div class="text-part">
-                                <p> 25 sales made</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <span class="text-warning"><i class="fas fa-user"></i></span>
-                            </div>
-                            <div class="text-part">
-                                <p> You changed your username</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <span class="text-success"><i class="fas fa-users"></i></span>
-                            </div>
-                            <div class="text-part">
-                                <p>5 new members joined</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <span class="text-danger"><i class="fas fa-exclamation-triangle"></i></span>
-                            </div>
-                            <div class="text-part">
-                                <p> Very long description here that may...</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <span class="text-success"><i class="fas fa-cart-plus"></i></span>
-                            </div>
-                            <div class="text-part">
-                                <p> 25 sales made</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img-part">
-                                <span class="text-warning"><i class="fas fa-user"></i></span>
-                            </div>
-                            <div class="text-part">
-                                <p> You changed your username</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <div class="dropdown_footer">
-                    <a href="#">view All</a>
-                </div>
-            </div>
-        </li>
-        <li><a data-toggle="dropdown" href="#"><i class="far fa-user"></i></a>
-                <div class="user_item dropdown-menu dropdown-menu-right">
-                    <div class="admin">
-                        <a href="#" class="user_link"><img src="{{ asset('panel/assets/images/admin.jpg') }}" alt=""></a>
-                    </div>
-                    <div>
-                        <div class="text-center"><small>{{ Auth::guard('admin')->user()->name }}<br>{{ Auth::guard('admin')->user()->email }}</small></div>
-                    </div>
-                <ul>
-                    
-                    
-                    <li><a href="#"><span><i class="fas fa-user"></i></span> User Profile</a></li>
-                    <li><a href=" "><span><i class="fas fa-cogs"></i></span>  Password Change</a></li>
-                    <li>
+<header class="main-header">
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top pl-30">
+      <!-- Sidebar toggle button-->
+	  <div>
+		  <ul class="nav">
+			<li class="btn-group nav-item">
+				<a href="#" class="waves-effect waves-light nav-link rounded svg-bt-icon" data-toggle="push-menu" role="button">
+					<i class="nav-link-icon mdi mdi-menu"></i>
+			    </a>
+			</li>
+			<li class="btn-group nav-item">
+				<a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link rounded svg-bt-icon" title="Full Screen">
+					<i class="nav-link-icon mdi mdi-crop-free"></i>
+			    </a>
+			</li>			
+			<li class="btn-group nav-item d-none d-xl-inline-block">
+				<a href="#" class="waves-effect waves-light nav-link rounded svg-bt-icon" title="">
+					<i class="ti-check-box"></i>
+			    </a>
+			</li>
+			<li class="btn-group nav-item d-none d-xl-inline-block">
+				<a href="calendar.html" class="waves-effect waves-light nav-link rounded svg-bt-icon" title="">
+					<i class="ti-calendar"></i>
+			    </a>
+			</li>
+		  </ul>
+	  </div>
+		
+      <div class="navbar-custom-menu r-side">
+        <ul class="nav navbar-nav">
+		  <!-- full Screen -->
+	      <li class="search-bar">		  
+			  <div class="lookup lookup-circle lookup-right">
+			     <input type="text" name="s">
+			  </div>
+		  </li>			
+		  <!-- Notifications -->
+		  <li class="dropdown notifications-menu">
+			<a href="#" class="waves-effect waves-light rounded dropdown-toggle" data-toggle="dropdown" title="Notifications">
+			  <i class="ti-bell"></i>
+			</a>
+			<ul class="dropdown-menu animated bounceIn">
 
-                        <a href="{{ route('admin_logout') }}"><span><i class="fas fa-unlock-alt"></i></span> Logout</a></li>
-                </ul>
-            </div>
-        </li>
-        <li>
+			  <li class="header">
+				<div class="p-20">
+					<div class="flexbox">
+						<div>
+							<h4 class="mb-0 mt-0">Notifications</h4>
+						</div>
+						<div>
+							<a href="#" class="text-danger">Clear All</a>
+						</div>
+					</div>
+				</div>
+			  </li>
 
-            <a class="responsive_menu_toggle" href="#"><i class="fas fa-bars"></i></a></li>
-    </ul>
-</header><!-- / header area -->
+			  <li>
+				<!-- inner menu: contains the actual data -->
+				<ul class="menu sm-scrol">
+				  <li>
+					<a href="#">
+					  <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc suscipit blandit.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-user text-primary"></i> Nunc fringilla lorem 
+					</a>
+				  </li>
+				  <li>
+					<a href="#">
+					  <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.
+					</a>
+				  </li>
+				</ul>
+			  </li>
+			  <li class="footer">
+				  <a href="#">View all</a>
+			  </li>
+			</ul>
+		  </li>	
+		  
+	      <!-- User Account-->
+          <li class="dropdown user user-menu">	
+			<a href="#" class="waves-effect waves-light rounded dropdown-toggle p-0" data-toggle="dropdown" title="User">
+				<img src="{{ asset('backend/images/avatar/1.jpg') }}" alt="">
+			</a>
+			<ul class="dropdown-menu animated flipInX">
+			<li class="text-center text-white">{{ Auth::guard('admin')->user()->name }}</li>
+			  <li class="user-body">
+				 <a class="dropdown-item" href="#"><i class="ti-user text-muted mr-2"></i> Profile</a>
+				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted mr-2"></i> My Wallet</a>
+				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted mr-2"></i> Settings</a>
+				 <div class="dropdown-divider"></div>
+				 <a class="dropdown-item" href="{{ route('admin_logout') }}"><i class="ti-lock text-muted mr-2"></i> Logout</a>
+			  </li>
+			</ul>
+          </li>	
+		  <li>
+              <a href="#" data-toggle="control-sidebar" title="Setting" class="waves-effect waves-light">
+			  	<i class="ti-settings"></i>
+			  </a>
+          </li>
+			
+        </ul>
+      </div>
+    </nav>
+  </header>

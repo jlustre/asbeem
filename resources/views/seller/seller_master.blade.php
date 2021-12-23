@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        
-        @include('admin.body.styles')
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ asset('backend/images/favicon.ico') }}">
+
+    <title>AsBeez Seller - Dashboard</title>
     
-    <body id="page-top">
-        <!-- preloader -->
-        <div class="preloader">
-            <img src="{{ asset('panel/assets/images/preloader.gif') }}" alt="">
-        </div>
-        <!-- wrapper -->
-        <div class="wrapper">
-         
-            @include('seller.body.header')
-                
-            @include('seller.body.sidebar')
+    @include('common.styles')
+     
+  </head>
 
-            @yield('seller')
+<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
+	
+<div class="wrapper">
 
-        </div><!--/ wrapper -->
-        
-        @include('admin.body.scripts')
+    @include('seller.body.header')
+    @include('seller.body.sidebar')
 
-    </body>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+
+		<!-- Main content -->
+        @yield('seller')
+		<!-- /.content -->
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+  
+    @include('common.footer')
+
+  <!-- Control Sidebar -->
+    @include('seller.body.control_sidebar')
+  <!-- /.control-sidebar -->
+  
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+  
+</div>
+<!-- ./wrapper -->
+	 
+    @include('common.scripts')
+	
+</body>
 </html>
