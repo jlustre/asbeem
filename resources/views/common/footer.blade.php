@@ -6,5 +6,5 @@
 		  </li>
 		</ul>
     </div>
-	  &copy; 2022 <a href="{{ url('/') }}">AsBeez</a>. All Rights Reserved.
+	  &copy; 2022 <a href="{{ url('/') }}">AsBeez Inc.</a>  All Rights Reserved.
   </footer>
